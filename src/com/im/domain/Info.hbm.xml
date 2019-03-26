@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.im.domain">
+	<class name="Info" table="T_Info">
+		<id name="iid">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name"></property>
+		<property name="nameAchi"></property>
+		<property name="address1"></property>
+		<property name="address2"></property>
+		<property name="address3"></property>
+		<property name="addAchi"></property>
+		<property name="birthday"></property>
+		<property name="birthAchi"></property>
+		<property name="sex"></property>
+		<property name="sexAchi"></property>
+		<property name="work"></property>
+		<property name="workAchi"></property>
+		<property name="tel"></property>
+		<property name="telAchi"></property>
+		<property name="IDCardNum"></property>
+		<property name="IDNumAchi"></property>
+		<property name="QQnum"></property>
+		<property name="QQAchi"></property>
+		<property name="email"></property>
+		<property name="emailAchi"></property>
+		<!-- <many-to-one class="User" unique="true" name="user"
+	  column="uid" cascade="save-update"></many-to-one>-->
+	  	<one-to-one name="user" class="User"></one-to-one>
+	</class>
+</hibernate-mapping>

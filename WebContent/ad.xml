@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ads>
+	<ad>
+		<href>http://www.meituan.com</href>
+		<imgsrc>images/ad/meituan.jpg</imgsrc>
+		<description>美团</description>
+	</ad>
+	<ad>
+		<href>http://www.baidu.com</href>
+		<imgsrc>images/ad/baidu.png</imgsrc>
+		<description>百度</description>
+	</ad>
+	<ad>
+		<href>http://www.youku.com</href>
+		<imgsrc>images/ad/youku.jpg</imgsrc>
+		<description>优酷</description>
+	</ad>
+	<ad>
+		<href>http://www.yilong.com</href>
+		<imgsrc>images/ad/yilong.jpg</imgsrc>
+		<description>艺龙</description>
+	</ad>
+</ads>

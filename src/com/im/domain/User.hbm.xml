@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.im.domain">
+	<class name="User" table="t_user">
+		<id name="uid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="username"></property>
+		<property name="password"></property>
+		<property name="email"></property>
+		<property name="state"></property>
+		<property name="statecode"></property>
+		
+		<!--  <one-to-one name="info" class="Info"></one-to-one>-->
+		<many-to-one class="Info" unique="true" name="info"
+	  column="iid" cascade="save-update"></many-to-one>
+		<set name="records">
+			<!-- record表里的uid -->
+			<key column="r_uid"></key>
+			<one-to-many class="Record"/>
+		</set>
+	</class>
+</hibernate-mapping>

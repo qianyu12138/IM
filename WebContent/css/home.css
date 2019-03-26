@@ -1,0 +1,52 @@
+@charset "UTF-8";
+body{
+	background: #cccccc;
+	margin: 0px;
+	padding:0px;
+	font-size: 12px;
+}
+
+#container{
+	margin: 0px auto;
+	width: 780px;
+	text-align: left;
+	background: #cccccc;
+	background: url("../images/background1.jpg") ;
+}
+
+#middle{
+	width: 500px;
+	height: 700px;
+	margin: 0px 2px 0px 2px;
+	padding: 0px 0px 0px 0px;
+	float:left;
+}
+
+#middle table{
+	font-size:13px;
+	text-align:center;
+}
+
+#right{
+	width: 276px;
+	height: 700px;
+	background: #cccccc;
+	margin: 0px;
+	padding: 0px 0px 5px 0px;
+	float:left;
+}
+
+#footer{
+	width: 100%;
+	height: 30px;
+	background: #cccccc;
+	text-align:center;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	clear: both;
+}
+input:focus
+ {
+    outline:none;
+    border:0px;
+}

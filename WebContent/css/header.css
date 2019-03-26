@@ -1,0 +1,71 @@
+@charset "UTF-8";
+#banner{
+	margin: 0px;
+	padding: 0px;
+	background: white;
+	height: 150px;
+	width: 100%;
+	background: url("../images/banner.jpg");
+	background-size: 780px 150px;
+}
+
+#globllink{
+	height:45px;
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	background: url("../images/globllink.png") no-repeat;
+}
+
+#globllink ul{
+	padding: 2px 15px;
+	margin: 0px;
+	font-size: 10px;
+	list-style-type: none;
+}
+
+#globllink ul li{
+	text-align:center;
+	margin:5px 12px;
+	height: 40px;
+	width: 80px;
+	float:left;
+}
+
+#globllink ul li a{
+	display: block;
+	padding: 8px 10px;
+	margin: 0px;
+	background: url("../images/button1.png") no-repeat;
+}
+
+#globllink ul li a:hover{
+	text-decoration:none;
+	background: url("../images/button1-hover.png") no-repeat;
+}
+
+#globllink ul li clear{
+	clear: both;
+}
+
+#welcome{
+	float:right;
+	padding-right: 5px;
+	padding-top: 133px;
+}
+
+textarea{
+	margin:4px;
+    border:0;  
+    background-color:transparent;
+    color: #666464;  
+    height: auto;
+    white-space:nowrap;
+    overflow:scroll;
+    overflow:hidden;
+}
+
+textarea:focus{
+    outline:none;
+    border:0px;
+}

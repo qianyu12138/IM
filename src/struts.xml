@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<package name="project" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="privilegeInterceptor" class="com.im.web.interceptor.PrivilegeInterceptor"></interceptor>
+			<interceptor-stack name="mystack">
+				<interceptor-ref name="privilegeInterceptor">
+					<param name="excludeMethods">login,regist,checkName</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+	
+		<default-interceptor-ref name="mystack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="toLogin" type="redirect">/index.jsp</result>
+		</global-results>
+	
+		<action name="UserAction_*" class="userAction" method="{1}">
+			<result name="error" >/index.jsp</result>
+			<result name="regist_success">/regist_success.jsp</result>
+			<result name="regist">/register.jsp</result>
+			<result name="success">/pages/user/success.jsp</result>
+			<result name="toHome" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">RecordAction_home</param>
+			</result>
+			<result name="toIndex" type="redirect">/index.jsp</result>
+			<result name="toFail" type="redirect">/activeFail.jsp</result>
+		</action>
+		<action name="RecordAction_*" class="recordAction" method="{1}">
+			<result name="home">/pages/user/home.jsp</result>
+			<result name="home_check">/pages/user/home_check.jsp</result>
+			<result name="recordReport">/pages/user/report.jsp</result>
+		</action>
+		<action name="InfoAction_*" class="infoAction" method="{1}">
+			<result name="manager">/pages/user/home_manager.jsp</result>
+		</action>
+	</package>
+</struts>
