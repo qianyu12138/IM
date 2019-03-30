@@ -3,7 +3,7 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.im.domain">
-	<class name="Info" table="T_Info">
+	<class name="Info" table="t_info">
 		<id name="iid">
 			<generator class="identity"></generator>
 		</id>

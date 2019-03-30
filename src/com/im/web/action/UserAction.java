@@ -59,6 +59,11 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		return null;
 	}
 	
+	/**
+	 * 账户激活
+	 * @return
+	 * @throws Exception
+	 */
 	public String active() throws Exception{
 		us.activeByCode(user.getStatecode());
 		return null;

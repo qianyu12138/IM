@@ -14,6 +14,7 @@ public class InfoAction extends ActionSupport implements ModelDriven<Info> {
 	
 	public String getInfo() throws Exception {
 		User u = (User) ActionContext.getContext().getSession().get("user");
+		System.out.println("  InfoAction getInfo:   \"" + u.getInfo().getIid() + "\"");
 		Info i = is.getInfo(u.getInfo().getIid());
 		ActionContext.getContext().put("info", i);
 		return "manager";

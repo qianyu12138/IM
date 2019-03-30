@@ -41,10 +41,6 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 				Criteria criteria = session.createCriteria(User.class);
 				criteria.add(Restrictions.eq("statecode",statecode));
 				User user = (User) criteria.uniqueResult();
-//				String hql = "from User where username = ?";
-//				Query query = session.createQuery(hql);
-//				query.setParameter(0, newName);
-//				User user = (User) query.uniqueResult();
 				return user;
 			}
 			

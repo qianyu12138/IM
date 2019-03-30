@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.im.dao.InfoDao;
 import com.im.dao.UserDao;
 import com.im.domain.Info;
 import com.im.domain.User;
@@ -26,6 +27,9 @@ public class HibernateTest {
 	
 	@Resource(name="infoService")
 	private InfoService is;
+	
+	@Resource(name="infoDao")
+	private InfoDao infoDao;
 	@Test
 	public void fun1() {
 		System.out.println(ud);
@@ -53,6 +57,7 @@ public class HibernateTest {
 	
 	@Test
 	public void fun4() {
-		User user = us.getByName("linfeng");
+		Info info = infoDao.getById(1);
+		System.out.println("  HibernateTest fun4:   \"" + info + "\"");
 	}
 }

@@ -9,7 +9,7 @@
 			<interceptor name="privilegeInterceptor" class="com.im.web.interceptor.PrivilegeInterceptor"></interceptor>
 			<interceptor-stack name="mystack">
 				<interceptor-ref name="privilegeInterceptor">
-					<param name="excludeMethods">login,regist,checkName</param>
+					<param name="excludeMethods">login,regist,checkName,active</param>
 				</interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 			</interceptor-stack>
