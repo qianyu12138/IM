@@ -58,6 +58,5 @@ public class HibernateTest {
 	@Test
 	public void fun4() {
 		Info info = infoDao.getById(1);
-		System.out.println("  HibernateTest fun4:   \"" + info + "\"");
 	}
 }
